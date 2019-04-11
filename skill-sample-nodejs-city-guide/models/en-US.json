@@ -1,0 +1,99 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "city guide",
+      "intents": [
+        {
+          "name": "AboutIntent",
+          "slots": [],
+          "samples": [
+            "about",
+            "tell me about this place"
+          ]
+        },
+        {
+          "name": "CoffeeIntent",
+          "slots": [],
+          "samples": [
+            "coffee"
+          ]
+        },
+        {
+          "name": "BreakfastIntent",
+          "slots": [],
+          "samples": [
+            "breakfast"
+          ]
+        },
+        {
+          "name": "LunchIntent",
+          "slots": [],
+          "samples": [
+            "lunch"
+          ]
+        },
+        {
+          "name": "DinnerIntent",
+          "slots": [],
+          "samples": [
+            "dinner"
+          ]
+        },
+        {
+          "name": "AttractionIntent",
+          "slots": [
+            {
+              "name": "distance",
+              "type": "AMAZON.NUMBER",
+              "samples": []
+            }
+          ],
+          "samples": [
+            "recommend an attraction",
+            "recommend an attraction within {distance} miles",
+            "give me an activity",
+            "give me an activity within {distance} miles"
+          ]
+        },
+        {
+          "name": "GoOutIntent",
+          "slots": [],
+          "samples": [
+            "go out",
+            "go outside",
+            "lets go out"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ]
+    }
+  },
+  "version": "1"
+}
