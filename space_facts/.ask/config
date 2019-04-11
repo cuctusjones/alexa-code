@@ -23,7 +23,7 @@
             "codeUri": "lambda/eu-west-1_serverlessrepo-alexa-skil-alexaskillskitnodejsfact-1UK49IM2DTZ8Y",
             "functionName": "serverlessrepo-alexa-skil-alexaskillskitnodejsfact-1UK49IM2DTZ8Y",
             "handler": "index.handler",
-            "revisionId": "f70ee08e-b7f9-460a-bfc7-b4af76732ed4",
+            "revisionId": "8415851a-baeb-4d43-af99-791e326c7c41",
             "runtime": "nodejs8.10"
           }
         ]
