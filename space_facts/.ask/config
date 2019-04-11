@@ -6,24 +6,24 @@
       "merge": {},
       "resources": {
         "manifest": {
-          "eTag": "c732a59c5aa8966cb7eea90da34817c5"
+          "eTag": "c4ab6da3541eb15e5297c3ac658b776e"
         },
         "interactionModel": {
           "en-US": {
-            "eTag": "9744fb00f34560103291dc3d4c9b25c2"
+            "eTag": "25a12c9da3291a689c4f76f1a1bc900d"
           }
         },
         "lambda": [
           {
+            "arn": "arn:aws:lambda:eu-west-1:668916122023:function:serverlessrepo-alexa-skil-alexaskillskitnodejsfact-1UK49IM2DTZ8Y",
+            "awsRegion": "eu-west-1",
+            "functionName": "serverlessrepo-alexa-skil-alexaskillskitnodejsfact-1UK49IM2DTZ8Y",
             "alexaUsage": [
               "custom/default"
             ],
-            "arn": "arn:aws:lambda:eu-west-1:668916122023:function:serverlessrepo-alexa-skil-alexaskillskitnodejsfact-1UK49IM2DTZ8Y",
-            "awsRegion": "eu-west-1",
+            "revisionId": "1e53e9e0-5757-4b50-94e8-669d1dccfc1e",
             "codeUri": "lambda/eu-west-1_serverlessrepo-alexa-skil-alexaskillskitnodejsfact-1UK49IM2DTZ8Y",
-            "functionName": "serverlessrepo-alexa-skil-alexaskillskitnodejsfact-1UK49IM2DTZ8Y",
             "handler": "index.handler",
-            "revisionId": "8415851a-baeb-4d43-af99-791e326c7c41",
             "runtime": "nodejs8.10"
           }
         ]

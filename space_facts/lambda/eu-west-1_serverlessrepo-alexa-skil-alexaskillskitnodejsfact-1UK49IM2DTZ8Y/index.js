@@ -2,6 +2,8 @@
 /* eslint-disable  no-console */
 
 const Alexa = require('ask-sdk');
+const rp = require('request-promise');
+const moment = require('moment');
 
 
 const GetNewJokeHandler = {
@@ -27,6 +29,64 @@ const GetNewJokeHandler = {
       .getResponse();
   },
 };
+
+function setNewReminder(handlerInput) {
+  const alert = {};
+  const event = handlerInput.requestEnvelope;
+  const timezone = 'Germany/Berlin';
+
+  
+  //const time = getTournamentTime();
+  const time = request.intent.slots.time.value;
+  // Lop off trailing Z from string
+  let start = time.toISOString();
+  if (start.substring(start.length - 1) === 'Z') {
+    start = start.substring(0, start.length - 1);
+  }
+
+  // Set locale to English so recurrence.byDay is properly set
+  moment.locale('en');
+  alert.requestTime = start;
+  alert.trigger = {
+    type: 'SCHEDULED_ABSOLUTE',
+    scheduledTime: start,
+    timeZoneId: timezone,
+    recurrence: {
+      freq: 'WEEKLY',
+      byDay: [moment(time).format('dd').toUpperCase()],
+    },
+  };
+  alert.alertInfo = {
+    spokenInfo: {
+      content: [{
+        locale: event.request.locale,
+        text: 'The Slot Machine tournament is starting now.',
+      }],
+    },
+  };
+  alert.pushNotification = {
+    status: 'ENABLED',
+  };
+  const params = {
+    url: event.context.System.apiEndpoint + '/v1/alerts/reminders',
+    method: 'POST',
+    headers: {
+      'Authorization': 'bearer ' + event.context.System.apiAccessToken,
+    },
+    json: alert,
+  };
+
+  // Post the reminder
+  return rp(params).then((body) => {
+    // Reminder was set OK
+    return 'OK';
+  })
+  .catch((err) => {
+    console.log('SetReminder error ' + err.error.code);
+    console.log('SetReminder alert: ' + JSON.stringify(alert));
+    return err.error.code;
+  });
+}
 
 const GetNewFactHandler = {
   canHandle(handlerInput) {
