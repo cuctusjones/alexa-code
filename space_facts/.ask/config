@@ -6,7 +6,7 @@
       "merge": {},
       "resources": {
         "manifest": {
-          "eTag": "c4ab6da3541eb15e5297c3ac658b776e"
+          "eTag": "c732a59c5aa8966cb7eea90da34817c5"
         },
         "interactionModel": {
           "en-US": {
@@ -15,15 +15,15 @@
         },
         "lambda": [
           {
-            "arn": "arn:aws:lambda:eu-west-1:668916122023:function:serverlessrepo-alexa-skil-alexaskillskitnodejsfact-1UK49IM2DTZ8Y",
-            "awsRegion": "eu-west-1",
-            "functionName": "serverlessrepo-alexa-skil-alexaskillskitnodejsfact-1UK49IM2DTZ8Y",
             "alexaUsage": [
               "custom/default"
             ],
-            "revisionId": "1e53e9e0-5757-4b50-94e8-669d1dccfc1e",
+            "arn": "arn:aws:lambda:eu-west-1:668916122023:function:serverlessrepo-alexa-skil-alexaskillskitnodejsfact-1UK49IM2DTZ8Y",
+            "awsRegion": "eu-west-1",
             "codeUri": "lambda/eu-west-1_serverlessrepo-alexa-skil-alexaskillskitnodejsfact-1UK49IM2DTZ8Y",
+            "functionName": "serverlessrepo-alexa-skil-alexaskillskitnodejsfact-1UK49IM2DTZ8Y",
             "handler": "index.handler",
+            "revisionId": "20255172-44a0-4ef1-bab7-7a3cad3fe3f4",
             "runtime": "nodejs8.10"
           }
         ]
